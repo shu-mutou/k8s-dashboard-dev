@@ -8,7 +8,7 @@ HELM_TMP="/tmp/helm"
 curl -SsL https://get.helm.sh/helm-${HELM_LATEST}-linux-amd64.tar.gz -o ${HELM_DOWNLOAD}
 mkdir -p ${HELM_TMP}
 tar -xf ${HELM_DOWNLOAD} -C ${HELM_TMP}
-mv ${HELM_TMP}/linux-amd64/helm ./
+mv ${HELM_TMP}/linux-amd64/helm ../
 
 rm -fr ${HELM_DOWNLOAD}
 rm -fr ${HELM_TMP}
