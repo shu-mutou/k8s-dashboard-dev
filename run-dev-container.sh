@@ -16,7 +16,7 @@ export K8S_DASHBOARD_CMD=$*
 export K8S_DASHBOARD_BIND_ADDRESS="0.0.0.0"
 export K8S_DASHBOARD_PORT=20443
 export DOCKER_RUN_OPTS="-v ${HOME}/.git-credentials:/home/user/.git-credentials -v ${DIR}/update_master.sh:${WKDIR}/update_master.sh -v ${KDIR}/helm:${WKDIR}/helm -e NODE_OPTIONS=--max-old-space-size=6144"
-export K8S_DASHBOARD_NPM_CMD=${K8S_DASHBOARD_NPM_CMD:-"run start:prod"}
+export K8S_DASHBOARD_NPM_CMD=${K8S_DASHBOARD_NPM_CMD:-""}
 
 # Start up dashboard development container
 cd ${K8S_DASHBOARD_SRC}
