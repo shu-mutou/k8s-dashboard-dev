@@ -7,16 +7,15 @@ case "$yn" in [yY]*) ;; *) echo "Abort."; exit ;; esac
 git fetch --all
 git fetch upstream
 
-# update upstream master
+# update local upstream/master branch
 git checkout master-upstream
 git pull
 
-# update local master and push to folked repo
+# update local master
 git checkout master
 git rebase upstream/master
 
-# push to folked repo
-# disable husky checks for updating master
+# push to folked repo without husky checks
 HUSKY=0 git push -f origin master
 
 # cleanup old reference for removed remote branch
